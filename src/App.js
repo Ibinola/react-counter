@@ -4,6 +4,7 @@ import CounterPage from './pages/CounterPage';
 import CounterUseReducer from './components/CounterUseReducer';
 import CounterUseState from './components/CounterUseState';
 import HomePage from './pages/HomePage';
+import ErrorPage from './pages/ErrorPage';
 import Navigation from './components/Navigation';
 
 
@@ -13,6 +14,7 @@ function App() {
       <Navigation />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<ErrorPage />} />
         <Route path="counter" element={<CounterPage />}>
           <Route path="custom-hook" element={<CounterUseState />} />
           <Route path="reducer" element={<CounterUseReducer />} />
